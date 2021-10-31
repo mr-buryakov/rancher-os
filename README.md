@@ -55,7 +55,7 @@
     __________________________________________________________________________________
     Some of configurations you can change after rancher OS already configured and installed:
     1. Network parameters may be changed with:
-    #sudo ros config set rancher.network.interfaces.eth0.address 10.6.131.30/25
+    #sudo ros config set rancher.network.interfaces.eth0.address 10.6.131.31/25
     #sudo system-docker restart network
     #ip a
     
