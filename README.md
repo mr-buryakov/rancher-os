@@ -45,7 +45,7 @@
     9. SSH rancher@10.10.10.1
     10. vi cloud-config.yml
     Copy-paste the cloud-config edited with your settings, make sure the pasted data is pated correctly, add your key in a single line
-    press exit exit :wq to save
+    press esc :wq to save
     11. Validate the config file:
     #sudo ros config validate -i cloud-config.yml
     12.Apply it:
