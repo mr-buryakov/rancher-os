@@ -1,4 +1,3 @@
-# rancher-os
 # rancher-os installation steps
 
     1. Download RancherOS ISO.
@@ -41,7 +40,7 @@
           apt-get -y install python
     ssh_authorized_keys:
       - ssh-rsa AAAABM7p7G........o77vsFONVPgfutxAgIGzLVw==
-  #    
+# rancher-os installation steps
 
     9. SSH rancher@10.10.10.1
     10. vi cloud-config.yml
