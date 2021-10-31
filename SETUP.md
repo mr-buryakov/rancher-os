@@ -43,10 +43,21 @@
       - ssh-rsa AAAABM7p7G........o77vsFONVPgfutxAgIGzLVw==
   #    
 
-    7. SSH rancher@10.10.10.1
-    vi cloud-config.yml
-
+    9. SSH rancher@10.10.10.1
+    10. vi cloud-config.yml
     Copy-paste the cloud-config edited with your settings, make sure the pasted data is pated correctly, add your key in a single line
     press exit exit :wq to save
-
+    11. Validate the config file:
+    #sudo ros config validate -i cloud-config.yml
+    12.Apply it:
+    #sudo ros install -c cloud-config.yml -d /dev/sda
+    13. Remove CD Image from VM, and then reboot.
+    14. SSH back into RancherOS (rancher@) using your new ssh private key
+    __________________________________________________________________________________
+    Some of configurations you can apply after rancher OS already configured and installed:
+    1. Network parameters may be changed with:
+    #sudo ros config set rancher.network.interfaces.eth0.address 10.6.131.30/25
+    #sudo system-docker restart network
+    #ip a
+    
 
