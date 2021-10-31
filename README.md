@@ -15,7 +15,33 @@
     7. Generate your ssh keys with putty gen or ssh-keygen linux.
     8 .Prepare your cloud-config file with next parameters:
 # cloud-config.yml
-    
+    #cloud-config
+
+    hostname: rancheros
+    rancher:
+      console: debian
+      network:
+        interfaces:
+          eth0:
+            address: 10.6.131.30/25
+            gateway: 10.6.131.1
+            mtu: 1500
+            dhcp: false
+        dns:
+          nameservers:
+          - 10.6.131.146
+          - 8.8.4.4  	  
+    write_files:
+      - path: /etc/rc.local
+        permissions: "0755"
+        owner: root
+        content: |
+          #!/bin/bash
+          apt-get -y update
+          apt-get -y install python
+    ssh_authorized_keys:
+      - ssh-rsa AAAABM7p7G........o77vsFONVPgfutxAgIGzLVw==
+  #    
 
     7. SSH rancher@10.10.10.1
     vi cloud-config.yml
