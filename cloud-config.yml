@@ -2,7 +2,7 @@
 
     hostname: rancheros
     rancher:
-	  console: debian
+      console: debian
       network:
         interfaces:
           eth0:
