@@ -12,10 +12,12 @@
     6. Add non persistent IP address to existing network interface:
     #ifconfig eth0 10.10.10.1 netmask 255.255.255.0 up
     #ip a
+    7. Generate your ssh keys with putty gen or ssh-keygen linux.
+    8 .Prepare your cloud-config file with next parameters:
+# cloud-config.yml
     
-    SSH to rancher@10.10.10.1
-    7. Generate your ssh keys with putty gen or ssh-keygen linux
 
+    7. SSH rancher@10.10.10.1
     vi cloud-config.yml
 
     Copy-paste the cloud-config edited with your settings, make sure the pasted data is pated correctly, add your key in a single line
