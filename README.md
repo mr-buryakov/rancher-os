@@ -58,5 +58,7 @@
     #sudo ros config set rancher.network.interfaces.eth0.address 10.6.131.31/25
     #sudo system-docker restart network
     #ip a
+    2. Hostname change:
+    # sudo ros config set hostname new-hostname
     
 
